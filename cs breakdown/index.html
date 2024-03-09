@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUmber Generator</title>
+</head>
+<body>
+    <h1>Random numbers and its breakdown</h1>
+    <p id="numbers"></p>
+    <p id="breakdown"></p>
+    <script>
+        let the = Math.floor(Math.random() * 1000);//generates random number
+        document.getElementById("numbers").innerHTML = "Random generated numbers:" + the;//outputs the random number
+        function placeValue(){//function to breakdown the randomly generated numbers
+            let hundreds = Math.floor(the / 100) * 100;//gets the hundreds
+            let tens = Math.floor(the / 10  % 10 ) * 10;//gets the tens
+            let ones = Math.floor(the % 10);//gets the ones
+            return result = hundreds + "," + tens + "," + ones;//the value that will be assigned to the function
+        }
+        document.getElementById("breakdown").innerHTML = "Breakdown:" + placeValue();//outputs the value created by the function
+    </script>
+</body>
+</html>
